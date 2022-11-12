@@ -5,9 +5,9 @@
 5. Go to appsetting.json file in the project
 6. change ToDOConnetionString values according to your MS SQL Database
 7. run following commands one by one in Package manager console
-    enable-migrations
-    add-migration InitialCreate
-    update-database
+    * enable-migrations
+    * add-migration InitialCreate
+    * update-database
     
 8. Then you can Run WebAPI Project
 
