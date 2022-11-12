@@ -1,0 +1,22 @@
+<div class="container my-5">
+    <h1 class="mb-3">To Do List</h1>
+    <table class="table" *ngIf="todos && todos.length > 0">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Sub Title</th>
+                <th>Date</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let todolist of todos">
+                <td>{{ todolist.title }}</td>
+                <td>{{ todolist.subTitle }}</td>
+                <td>{{ todolist.date }}</td>
+                <td><a [routerLink]="['todolist','edit' , todolist.id ]">View</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!todos || todos.length <= 0">No To Do Found</p>
+</div>

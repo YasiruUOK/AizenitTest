@@ -1,0 +1,39 @@
+<div class="container my-5" >
+    <h1 class="mb-3">Edit To Do</h1>
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="updateToDo()">
+                <div class="mb-3">
+                    <label for="id" class="form-label">Id</label>
+                    <input type="text" class="form-control" id="id" readonly
+                    name="id" [(ngModel)]="toDoDetails.id">
+                  </div>
+                <div class="mb-3">
+                  <label for="title" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="title" 
+                  name="title" [(ngModel)]="toDoDetails.title" required >
+                </div>
+                <div class="mb-3">
+                    <label for="subtitle" class="form-label">Sub Title</label>
+                    <input type="text" class="form-control" id="subtitle"
+                    name="subtitle" [(ngModel)]="toDoDetails.subTitle">
+                  </div>
+                  <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="date"
+                    name="date" [(ngModel)]="toDoDetails.date">
+                  </div>
+                <div class="container">
+                    <div class="row justify-content-md-center">
+                      <div class="col col-lg-2">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                      </div>
+                      <div class="col col-lg-2">
+                        <button type="button" class="btn btn-danger" (click)="deleteToDo(toDoDetails.id)">Delete</button>
+                      </div>
+                    </div>
+                  </div>
+            </form>
+        </div>
+    </div>
+</div>
